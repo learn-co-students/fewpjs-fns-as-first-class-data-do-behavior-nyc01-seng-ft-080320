@@ -1,20 +1,22 @@
 /* Given Code, don't edit */
 
-// document.querySelector("button").addEventListener("click", handleClick);
+document.querySelector("button").addEventListener("click", handleClick);
 
-function handleClick(e) {
+function handleClick() {
   const timeString = document.getElementById('time').value
   displayMessage(greet(timeString))
 }
+
 
 /* End Given Code, don't edit above here...*/
 
 /* Write your implementation of greet() */
 
-
+function displayMessage(){
+  document.getElementById("greeting").innerText = greet(document.querySelector('#time').value)
+}
 
 function greet(time){
-  
   let hour = time.split(":")//?
   hour = hour[0]
   if (hour < 12) {
@@ -30,13 +32,11 @@ function greet(time){
   }
 }
 
-function message(){
-  document.getElementById("greeting").innerHTML = greet(document.querySelector('#time').value)
-}
 
-today_date = new Date()
-current_time = today_date.getHours() + ":" + today_date.getMinutes() 
-current_time
+
+// today_date = new Date()
+// current_time = today_date.getHours() + ":" + today_date.getMinutes() 
+// current_time
 // greet(current_time)//?
 
 
@@ -46,11 +46,11 @@ current_time
 // let form = document.getElementById('#time')
 // document.getElementById("greeting").innerHTML = greet(document.querySelector('#time').value)
 
-let form = document.getElementById("timeinput");
-let input = ""
-document.getElementById("timeinput-submit").addEventListener("click", function () {
-  // input = document.querySelector('#time').value
-  // document.getElementById("greeting").innerHTML = greet(document.querySelector('#time').value)
-  message()
-  form.submit();
-});
+// let form = document.getElementById("timeinput");
+// let input = ""
+// document.getElementById("timeinput-submit").addEventListener("click", function () {
+//   // input = document.querySelector('#time').value
+//   // document.getElementById("greeting").innerHTML = greet(document.querySelector('#time').value)
+//   displayMessage()
+//   form.submit();
+// });
